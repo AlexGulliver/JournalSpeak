@@ -1,6 +1,4 @@
-// StartSessionButton.tsx
-
-// Define the expected props (the function passed from Home)
+// Home page button start button component
 interface StartButtonProps {
     onStart: () => void;
 }

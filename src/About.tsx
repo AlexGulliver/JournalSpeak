@@ -2,10 +2,12 @@
 
 export default function About() {
     return (
-      <div className="flex items-center justify-center bg-gray-300 h-160">
+      <div className="flex items-center justify-center bg-gray-300 h-180">
         <div className="p-2 bg-gray shadow-lg rounded-lg text-center w-240">
         <h4 className="text-3xl font-bold text-gray-800 mb-2">JournalSpeak</h4>
           <p className="text-lg text-gray-600">
+            <h5>NB: This website has not been endorsed by Nicole Sachs, the creator of JournalSpeak. For </h5>
+            <br />
             <i>"JournalSpeak is a form of targeted self-expression specifically designed to get to the heart of your repressed emotions" -  Sachs, Nicole J. Mind Your Body: A Revolutionary Programme to Release Chronic Pain and Anxiety </i>
             <br />
             <br />
@@ -19,17 +21,21 @@ export default function About() {
           <br />
           <h4 className="text-3xl font-bold text-gray-800 mb-2">Writing</h4>
           <p className="text-lg text-gray-600">
-            The writing exercise involves writing for <b>20 minutes</b>. 
+            JournalSpeak begins with <b>20 minutes</b> of writing.
           </p>
           <br />
           <h4 className="text-3xl font-bold text-gray-800 mb-2">Mindfulness</h4>
           <p className="text-lg text-gray-600">
-            The mindfulness session lasts <b>10 minutes</b> allowing you to ground yourself following emotional release. Nicole recommends flexibility in what form this can take. You could try guided meditation, breathwork or simply just being present.
+            The mindfulness session lasts <b>10 minutes</b> allowing you to ground yourself following emotional release. You could try guided meditation, breathwork or simply just being present.
           </p>
           <br />
           <h4 className="text-3xl font-bold text-gray-800 mb-2">Useful Links</h4>
           <p className="text-lg text-gray-600">
-          https://www.yourbreakawake.com/
+            <a href="https://www.yourbreakawake.com/" target="_blank">Nicole Sachs' Website</a>
+            <br />
+            <a href="https://www.youtube.com/@thecureforchronicpain/featured" target="_blank">Nicole Sachs' Youtube</a>
+            <br />
+            <a href="https://www.youtube.com/watch?v=H1K9wWzgnlA" target="_blank">JournalSpeak Video</a>
           </p>
         </div>
       </div>

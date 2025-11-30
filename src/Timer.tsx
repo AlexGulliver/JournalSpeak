@@ -1,12 +1,19 @@
-// MyTimer.tsx
+// Timer Component 
 import { useState } from 'react';
 import { useTimer } from 'react-timer-hook';
 
 export default function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) {
-    // ----------------------------------------------------
-    // Step 1: Initialize the visibility state
     const [isVisible, setIsVisible] = useState(true);
 
+    const handleTimerExpire = () => {
+        console.warn("Timer has completed.");
+      
+        setIsVisible(true);
+      
+        const timer = document.getElementById("timer");
+        timer.classList.add("timer-pulse");
+      };
+      
     const {
         seconds,
         minutes,
@@ -15,11 +22,9 @@ export default function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) 
         pause,
         resume,
         restart,
-    } = useTimer({ expiryTimestamp, onExpire: (TimerComplete: any) => console.warn('onExpire called'), interval: 20 });
+    } = useTimer({ expiryTimestamp, onExpire: handleTimerExpire, interval: 20 });
 
     const toggleVisibility = () => {
-        // This sets 'isVisible' to the opposite of its current value (!prev)
-        // If it was true, it becomes false. If it was false, it becomes true.
         setIsVisible(prev => !prev);
     };
 
@@ -33,7 +38,7 @@ export default function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) 
             </button>
             {isVisible && (
                 <>
-                    <div className="text-[100px]">
+                    <div id="timer" className="text-[100px]">
                         <span>
                             {minutes.toString().padStart(2, '0')}
                         </span>
@@ -48,10 +53,4 @@ export default function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) 
     );
 }
 
-function TimerComplete(){
-    return(
-        <div>
-            Timer Complete
-        </div>
-    )
-}
+
